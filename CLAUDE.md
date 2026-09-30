@@ -2,7 +2,7 @@
 
 Marketing site for **Le Booth**, a San Diego photo booth company (founded 2025 by Leonardo Amezcua). Three services: photo booth rentals (weddings first, also corporate/private events), custom built booths, and free venue installs on a profit share.
 
-Stack: **Next.js App Router, TypeScript, React 19, plain CSS** (`app/globals.css`, no Tailwind). No other dependencies. Keep it that way unless there's a clear reason.
+Stack: **Next.js App Router, TypeScript, React 19, plain CSS** (`app/globals.css`, no Tailwind), **Supabase** (`@supabase/supabase-js`, `@supabase/ssr`) for storing form submissions. No other dependencies. Keep it that way unless there's a clear reason.
 
 ## Commands
 
@@ -16,7 +16,9 @@ npm run build    # must pass with zero type errors before any push
 
 - `app/page.tsx`: home (server component). Chrome lives in `components/HomeShell.tsx` (client).
 - `app/about/page.tsx`, `app/quote/page.tsx`: inner pages.
-- `app/api/quote/route.ts`: receives the quote form. Emails via Resend if `RESEND_API_KEY` is set, POSTs JSON to `QUOTE_WEBHOOK_URL` if set, otherwise logs.
+- `app/api/quote/route.ts`: receives the quote form. Saves to Supabase `quote_requests` if the `NEXT_PUBLIC_SUPABASE_*` vars are set, emails via Resend if `RESEND_API_KEY` is set, POSTs JSON to `QUOTE_WEBHOOK_URL` if set, otherwise logs.
+- `lib/supabase/server.ts`: server-side Supabase client (publishable key, no auth). Supabase project "Le Booth Website" (`roaysljhksexcadthdfj`).
+- **Supabase security model (no auth yet):** `quote_requests` has RLS on; the public `anon` role may only INSERT (no select/update/delete), because rows hold customer PII and the publishable key is public. Length/email checks live in the table itself since anyone can call the API with that key. Read leads in the Supabase dashboard. Don't add a public SELECT policy.
 - `lib/site.ts`: contact info + LocalBusiness JSON-LD. `lib/faqs.ts`: FAQ copy + FAQPage JSON-LD.
 - `components/`: client components are only the interactive bits (theme, eyes, gallery, FAQ, video, form, reveal, progress).
 - `design-reference/`: the approved HTML prototypes the site was built from. Visual source of truth. Their image paths point at `assets/` and won't resolve here; the same images live in `public/images`.

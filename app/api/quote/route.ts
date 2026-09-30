@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
 
@@ -7,9 +8,10 @@ const clip = (v: unknown, max = 300) => (typeof v === "string" ? v.trim().slice(
 
 /**
  * Receives quote requests from /quote.
+ * - NEXT_PUBLIC_SUPABASE_URL + NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY set: saves the lead to the `quote_requests` table
  * - RESEND_API_KEY set: emails the lead to QUOTE_TO_EMAIL (reply goes straight to the client)
  * - QUOTE_WEBHOOK_URL set: also POSTs the lead as JSON (Zapier, Make, a spreadsheet, etc.)
- * - Neither set: logs the lead to the server console (fine for local dev)
+ * - None set: logs the lead to the server console (fine for local dev)
  */
 export async function POST(req: Request) {
   let body: Record<string, unknown>;
@@ -64,6 +66,30 @@ export async function POST(req: Request) {
 
   const tasks: Promise<void>[] = [];
 
+  const supabase = await createSupabaseServerClient();
+  if (supabase) {
+    tasks.push(
+      // No .select(): the public role can insert but not read rows back.
+      Promise.resolve(
+        supabase.from("quote_requests").insert({
+          name: lead.name,
+          email: lead.email,
+          phone: lead.phone || null,
+          intent: lead.intent || null,
+          amount: lead.amount || null,
+          addons: lead.addons,
+          event_date: lead.date || null,
+          place: lead.place || null,
+          size: lead.size || null,
+          source: lead.source || null,
+          notes: lead.notes || null,
+        })
+      ).then(({ error }) => {
+        if (error) throw new Error(`Supabase: ${error.message}`);
+      })
+    );
+  }
+
   const resendKey = process.env.RESEND_API_KEY;
   if (resendKey) {
     tasks.push(
@@ -97,7 +123,7 @@ export async function POST(req: Request) {
   }
 
   if (!tasks.length) {
-    console.info(`[quote] RESEND_API_KEY / QUOTE_WEBHOOK_URL not set, lead only logged:\n${text}`);
+    console.info(`[quote] Supabase / RESEND_API_KEY / QUOTE_WEBHOOK_URL not set, lead only logged:\n${text}`);
     return NextResponse.json({ ok: true });
   }
 
