@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Le Booth | Photo Booth Rentals &amp; Custom Booths in San Diego &amp; Los Angeles</title>
+<meta name="description" content="Hand-built photo booths for San Diego and Los Angeles weddings and events. Booth rentals with unlimited photo sessions and printed strips, fully custom booth builds, and free venue installs on a revenue share. Est. 2025.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://le-booth.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Le Booth">
+<meta property="og:title" content="Le Booth | Photo Booth Rentals &amp; Custom Booths in San Diego">
+<meta property="og:description" content="Hand-built photo booths for weddings and events across San Diego and Los Angeles. Rentals, custom builds, and free venue installs on a revenue share.">
+<meta property="og:image" content="assets/booth-angle.png">
+<meta property="og:url" content="https://le-booth.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Le Booth | Photo Booth Rentals in San Diego &amp; Los Angeles">
+<meta name="twitter:description" content="Hand-built photo booths for weddings and events. Rentals, custom builds, venue profit share.">
+<meta name="twitter:image" content="assets/booth-angle.png">
+<meta name="theme-color" content="#2A211A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="preload" as="image" href="assets/booth-night.jpg" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/TAYDannyLasso.woff2" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Archivo:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior:smooth; }
+  html, body { margin:0; padding:0; background:#2A211A; }
+  section[id] { scroll-margin-top:96px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+  * { box-sizing:border-box; }
+  @font-face { font-family:"TAY Danny Lasso"; src:url("assets/fonts/TAYDannyLasso.woff2") format("woff2"); font-display:swap; }
+  @font-face { font-family:"TAY Amaya"; src:url("assets/fonts/TAYAmaya.woff") format("woff"); font-display:swap; }
+  a { color:#F7F1E6; text-decoration:none; }
+  a:hover { color:#C9B79E; }
+  input, textarea, button { font-family:inherit; font-size:inherit; }
+  ::selection { background:#F7F1E6; color:#2A211A; }
+  @keyframes lb-drift { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  @keyframes lb-blink { 0%,45%{opacity:1} 50%,95%{opacity:0.2} 100%{opacity:1} }
+  @keyframes lb-twitch {
+    0%, 33.2% { transform:translate(-0.7px,0.4px) rotate(-1.6deg); }
+    33.3%, 66.5% { transform:translate(0,-0.6px) rotate(0deg); }
+    66.6%, 100% { transform:translate(0.7px,0.4px) rotate(1.6deg); }
+  }
+  [data-theming="1"], [data-theming="1"] * { transition: background-color 2.6s ease, color 2.6s ease, border-color 2.6s ease, background-image 2.6s ease, filter 2.6s ease !important; }
+  [data-theme="day"] { background:#FDF3E3 !important; color:#2A211A !important; }
+  [data-theme="day"] section, [data-theme="day"] footer, [data-theme="day"] header { background-color:#FDF3E3 !important; color:#2A211A !important; }
+  [data-theme="day"] a, [data-theme="day"] h1, [data-theme="day"] h2, [data-theme="day"] h3, [data-theme="day"] p, [data-theme="day"] span, [data-theme="day"] button { color:#2A211A !important; }
+  [data-theme="day"] [data-card] { background-color:#F4E7CF !important; border-color:rgba(42,33,26,0.16) !important; }
+  [data-theme="day"] [data-cta] { background-color:#2A211A !important; color:#FDF3E3 !important; border-color:#2A211A !important; }
+  [data-theme="day"] [data-cta] span { color:#FDF3E3 !important; }
+  [data-theme="day"] [data-cta] [data-eye] { background:#FDF3E3 !important; }
+  [data-theme="day"] [data-cta] [data-eye] > span { background:#2A211A !important; }
+  [data-theme="day"] [data-invert-card] { background-color:#2A211A !important; }
+  [data-theme="day"] [data-invert-card] span, [data-theme="day"] [data-invert-card] p { color:#F7F1E6 !important; }
+  [data-theme="day"] [data-invert-card] img { filter:invert(1) !important; }
+  [data-theme="day"] [data-invert-card] [data-cta] { background-color:#F7F1E6 !important; border-color:#F7F1E6 !important; }
+  [data-theme="day"] [data-invert-card] [data-cta], [data-theme="day"] [data-invert-card] [data-cta] span { color:#2A211A !important; }
+  [data-theme="day"] img[data-mark] { filter:none !important; }
+  [data-theme="day"] [data-step] { background-color:#F4E7CF !important; }
+  [data-theme="day"] [data-invert-card] img[data-mark] { filter:invert(1) !important; }
+  [data-theme="day"] section, [data-theme="day"] div, [data-theme="day"] button, [data-theme="day"] a, [data-theme="day"] [data-faq], [data-theme="day"] header { border-color:rgba(42,33,26,0.16) !important; }
+  [data-theme="day"] header { background-color:transparent !important; }
+  [data-theme="day"] [data-steps-grid] { background-color:rgba(42,33,26,0.16) !important; }
+  [data-theme="day"] [data-cta-dark] { background-color:#2A211A !important; }
+  [data-theme="day"] [data-cta-dark], [data-theme="day"] [data-cta-dark] span { color:#FDF3E3 !important; }
+  [data-theme] [data-cta-dark] { transition:background-color 0.2s ease, transform 0.2s ease; }
+  [data-theme] [data-cta-dark]:hover { background-color:#4A3B2E !important; color:#F7F1E6 !important; transform:translateY(-1px); }
+  [data-theme="day"] [data-hero] { background-image:linear-gradient(rgba(253,243,227,0.72), rgba(253,243,227,0.86)), url('assets/booth-night.jpg') !important; }
+  [data-theme="day"] [data-hero] span, [data-theme="day"] [data-hero] a { color:#2A211A !important; }
+  [data-theme="day"] * { text-shadow:none !important; }
+  [data-theme="day"] [data-hero-cta] { background-color:#2A211A !important; border-color:#2A211A !important; }
+  [data-theme="day"] [data-hero-cta] { color:#FDF3E3 !important; }
+  [data-theme="day"] [data-outline] { border-color:rgba(42,33,26,0.35) !important; }
+  [data-theme="day"] video { filter:none !important; }
+  [data-theme="day"] [data-bar] { background-color:#2A211A !important; color:#FDF3E3 !important; }
+  [data-theme="day"] [data-bar] span { color:#FDF3E3 !important; }
+  [data-theme="day"] [data-bar] img { filter:invert(1) !important; }
+  [data-theme="day"] input, [data-theme="day"] textarea { color:#2A211A !important; border-color:rgba(42,33,26,0.28) !important; }
+  [data-theme="day"] input::placeholder, [data-theme="day"] textarea::placeholder { color:rgba(42,33,26,0.5) !important; }
+  [data-theme="day"] [data-stickynav] { background-color:rgba(253,243,227,0.94) !important; border-color:rgba(42,33,26,0.16) !important; }
+  [data-theme="day"] [data-stickynav] img[data-mark] { filter:none !important; }
+  [data-theme="day"] [data-progress] { background:#2A211A !important; }
+  [data-rail]::-webkit-scrollbar { display:none; }
+  @media (max-width: 720px) { [data-navlinks] { display:none !important; } }
+
+  /* interaction states last: these must beat the day-mode !important rules */
+  [data-theme] [data-cta] { transition:background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; }
+  [data-theme] [data-cta]:hover { background-color:#C9B79E !important; color:#2A211A !important; transform:translateY(-1px); }
+  [data-theme] [data-cta]:hover span { color:#2A211A !important; }
+  [data-theme] [data-invert-card] [data-cta]:hover { background-color:#C9B79E !important; }
+  [data-theme] [data-outline] { transition:border-color 0.2s ease, background-color 0.2s ease; }
+  [data-theme] [data-outline]:hover { border-color:rgba(247,241,230,0.7) !important; background-color:rgba(247,241,230,0.06) !important; }
+  [data-theme="day"] [data-outline]:hover { border-color:rgba(42,33,26,0.7) !important; background-color:rgba(42,33,26,0.05) !important; }
+  [data-theme] [data-card] { transition:border-color 0.25s ease, transform 0.25s ease; }
+  [data-theme] [data-card]:hover { border-color:rgba(247,241,230,0.34) !important; transform:translateY(-2px); }
+  [data-theme] [data-faq]:hover span { color:#F7F1E6; }
+  [data-theme="day"] [data-faq]:hover span { color:#2A211A; }
+  [data-theme] nav a { position:relative; transition:color 0.2s ease, opacity 0.2s ease; }
+  [data-theme] nav a:hover { opacity:0.72; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, [role="button"]:focus-visible {
+    outline:2px solid #C9B79E; outline-offset:3px; border-radius:2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-theme] [data-cta]:hover, [data-theme] [data-card]:hover { transform:none; }
+  }
+  @media (prefers-reduced-motion: reduce) { [data-reveal] { opacity:1 !important; transform:none !important; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://le-booth.com/#business",
+  "name": "Le Booth",
+  "alternateName": "Le Booth San Diego",
+  "description": "Hand-built photo booth rentals, custom booth builds, and venue profit-share installs serving San Diego and Los Angeles.",
+  "url": "https://le-booth.com/",
+  "email": "info@le-booth.com",
+  "telephone": "+1-619-438-0163",
+  "priceRange": "$$",
+  "foundingDate": "2025",
+  "founder": { "@type": "Person", "name": "Leonardo Amezcua" },
+  "address": { "@type": "PostalAddress", "addressLocality": "San Diego", "addressRegion": "CA", "addressCountry": "US" },
+  "areaServed": [
+    { "@type": "City", "name": "San Diego" },
+    { "@type": "City", "name": "Los Angeles" },
+    { "@type": "AdministrativeArea", "name": "Southern California" }
+  ],
+  "knowsAbout": ["photo booth rental", "wedding photo booth", "custom photo booth fabrication", "event photo booth"],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Photo booth rentals for weddings and events", "serviceType": "Photo booth rental" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom built photo booths", "serviceType": "Custom photo booth fabrication" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Venue profit share installs", "serviceType": "Revenue share photo booth placement" } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How far ahead should I book?", "acceptedAnswer": { "@type": "Answer", "text": "Dates go first come, first served, and weekends in peak season go fastest. Your date is held once the agreement is signed and the retainer is paid. If your date is soon, ask anyway." } },
+    { "@type": "Question", "name": "What do you need from the venue?", "acceptedAnswer": { "@type": "Answer", "text": "A level spot that doesn't block exits or walkways, and a standard outlet nearby." } },
+    { "@type": "Question", "name": "Can the prints match our colors or our brand?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Custom print artwork is included, designed around your names, colors, monogram, or logo, with up to two rounds of revisions." } },
+    { "@type": "Question", "name": "How does the venue profit share work?", "acceptedAnswer": { "@type": "Answer", "text": "We install and service the booth at our cost, guests pay per session, and the venue takes a percentage of everything it earns. The specific split goes in writing after we walk the space." } },
+    { "@type": "Question", "name": "Do you travel outside San Diego?", "acceptedAnswer": { "@type": "Answer", "text": "San Diego and Los Angeles are standard, and we travel beyond both for a fee. Custom builds ship nationwide crated." } }
+  ]
+}
+</script>
+</helmet>
+<div data-theme="{{ theme }}" data-theming="{{ theming }}" style="background:#2A211A;color:#F7F1E6;font-family:Archivo, Helvetica, sans-serif;overflow-x:hidden">
+
+  <a href="#what" style="position:absolute;left:-9999px;top:0;z-index:99;padding:12px 18px;background:#F7F1E6;color:#2A211A;font-size:13px;font-weight:700" onFocus="{{ showSkip }}" onBlur="{{ hideSkip }}" ref="{{ skipRef }}">Skip to content</a>
+
+  <div data-bar="" style="display:flex;align-items:center;gap:10px;justify-content:center;padding:10px 20px;background:#F7F1E6;color:#2A211A;font-size:11px;letter-spacing:0.16em;font-weight:600">
+    <img data-mark="" src="assets/logo-mark.png" alt="" style="width:12px;height:12px;object-fit:contain;animation:lb-blink 2.4s infinite">
+    <span>NOW BOOKING 2026 &amp; 2027 WEDDINGS ✳ CUSTOM BUILDS SHIPPING NATIONWIDE</span>
+  </div>
+
+  <div style="position:sticky;top:0;z-index:60;height:3px;background:transparent"><div data-progress="" ref="{{ progressRef }}" style="height:3px;width:0%;background:#F7F1E6"></div></div>
+
+  <header style="position:absolute;top:36px;left:0;right:0;z-index:50;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(10px,2vw,28px);padding:12px clamp(16px,4vw,32px);background:transparent;text-shadow:0 1px 12px rgba(0,0,0,0.55)">
+    <a href="#top" style="display:flex;align-items:center;flex:1 1 0;min-width:0"><img data-mark="" src="assets/logo-mark.png" alt="Le Booth" style="width:32px;height:32px;object-fit:contain;filter:invert(1);animation:lb-twitch 1.95s steps(3,end) infinite"></a>
+    <nav style="display:flex;align-items:center;justify-content:center;gap:clamp(10px,2.4vw,30px);flex:0 0 auto;font-family:'Archivo Black',Helvetica,sans-serif;font-size:clamp(11px,1.15vw,14px);letter-spacing:0.05em">
+      <a href="Get%20a%20Quote.dc.html">GET A QUOTE</a>
+      <a href="About%20Us.dc.html">ABOUT US</a>
+      <a href="#services">SERVICES</a>
+      <a href="#gallery">GALLERY</a>
+    </nav>
+    <div style="display:flex;align-items:center;justify-content:flex-end;gap:12px;flex:1 1 0;min-width:0">
+      <button onClick="{{ toggleTheme }}" title="Toggle day / night" aria-label="Toggle day and night mode" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:none;background:transparent;color:#F7F1E6;cursor:pointer;padding:0">
+        <span style="position:relative;display:block;width:26px;height:14px;overflow:hidden;border-bottom:2px solid currentColor">
+          <span style="position:absolute;left:6px;top:{{ sunTop }};width:14px;height:14px;border-radius:50%;border:2px solid currentColor;background:{{ sunBg }};transition:top 0.9s cubic-bezier(0.65,0,0.35,1), background-color 0.9s ease"></span>
+        </span>
+      </button>
+      <a href="Get%20a%20Quote.dc.html" data-cta="" style="display:flex;align-items:center;gap:1px;padding:11px 20px;border-radius:6px;background:#F7F1E6;color:#2A211A;font-family:'Archivo Black',Helvetica,sans-serif;font-size:13px;letter-spacing:0.05em">
+        <span>B</span>
+        <span data-eye="" title="ojos" style="position:relative;display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:#2A211A;margin:0 1px;position:relative;top:1px">
+          <span ref="{{ eyeLRef }}" style="display:block;width:4px;height:4px;border-radius:50%;background:#F7F1E6"></span>
+        </span>
+        <span data-eye="" title="ojos" style="position:relative;display:inline-flex;align-items:center;justify-content:center;width:10px;height:10px;border-radius:50%;background:#2A211A;margin:0 1px;position:relative;top:1px">
+          <span ref="{{ eyeRRef }}" style="display:block;width:4px;height:4px;border-radius:50%;background:#F7F1E6"></span>
+        </span>
+        <span>K</span>
+      </a>
+    </div>
+  </header>
+
+  <div data-stickynav="" ref="{{ stickyNavRef }}" aria-label="Section navigation" style="position:fixed;top:0;left:0;right:0;z-index:70;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:10px clamp(16px,4vw,32px);background:rgba(34,26,20,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(247,241,230,0.14);transform:translateY(-110%);transition:transform 0.45s cubic-bezier(0.2,0.8,0.2,1);will-change:transform">
+    <a href="#top" style="display:flex;align-items:center;gap:10px">
+      <img data-mark="" src="assets/logo-mark.png" alt="Le Booth, back to top" style="width:21px;height:21px;object-fit:contain;filter:invert(1)">
+      <span style="font-family:'TAY Danny Lasso',Archivo,sans-serif;font-size:19px;letter-spacing:0.02em">LE BOOTH</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:clamp(10px,1.8vw,24px);font-family:'Archivo Black',Helvetica,sans-serif;font-size:clamp(10px,1vw,12px);letter-spacing:0.06em">
+      <span data-navlinks="" style="display:flex;align-items:center;gap:clamp(10px,1.8vw,24px)">
+        <a href="#rentals">RENTALS</a>
+        <a href="#custom">CUSTOM</a>
+        <a href="#profit">VENUES</a>
+        <a href="#gallery">GALLERY</a>
+          <a href="About%20Us.dc.html">ABOUT</a>
+      </span>
+      <a href="Get%20a%20Quote.dc.html" data-cta="" style="padding:9px 16px;border-radius:6px;background:#F7F1E6;color:#2A211A">BOOK</a>
+    </div>
+  </div>
+
+  <section id="top" data-hero="" style="position:relative;min-height:min(92vh,760px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px;padding:clamp(96px,14vw,150px) clamp(18px,4vw,32px);background:linear-gradient(rgba(42,33,26,0.35), rgba(42,33,26,0.72)), url('assets/booth-night.jpg') center 45%/cover no-repeat, #2A211A">
+    <span style="position:absolute;left:32px;bottom:26px;font-size:11px;letter-spacing:0.18em;color:rgba(247,241,230,0.5)">HAND-BUILT IN SAN DIEGO ✳ EST. 2025</span>
+    <h1 style="margin:0;display:flex;flex-direction:column;align-items:center;gap:0;font-weight:400">
+      <span style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0">Le Booth, hand-built photo booth rentals and custom photo booths in San Diego and Los Angeles</span>
+      <span style="display:flex;align-items:center;gap:16px">
+        <span style="font-family:'TAY Danny Lasso',Archivo,sans-serif;font-size:clamp(52px,11.5vw,124px);line-height:0.9;letter-spacing:0">LE</span>
+        <img data-mark="" src="assets/logo-mark.png" alt="" style="width:26px;height:26px;object-fit:contain;filter:invert(1);flex:none;opacity:0.85">
+        <span style="font-family:'TAY Danny Lasso',Archivo,sans-serif;font-size:clamp(52px,11.5vw,124px);line-height:0.9;letter-spacing:0">BOOTH</span>
+      </span>
+      <span style="align-self:flex-end;font-family:'TAY Amaya',Archivo,sans-serif;font-size:clamp(15px,3vw,28px);letter-spacing:0.16em;color:rgba(247,241,230,0.92);margin-top:-6px">SAN DIEGO</span>
+    </h1>
+  </section>
+
+  <section id="what" style="padding:clamp(56px,9vw,104px) clamp(18px,4vw,32px);border-top:1px solid rgba(247,241,230,0.12)">
+    <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,5vw,64px);align-items:start">
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <h2 style="margin:0;font-size:clamp(34px,5.6vw,62px);line-height:1.02;letter-spacing:-0.02em;font-weight:400;text-wrap:balance">Not just another booth <span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(36px,6.2vw,70px);line-height:1.06">Not just another event</span></h2>
+        <p style="margin:0;max-width:52ch;font-size:clamp(16px,1.6vw,20px);line-height:1.5;color:rgba(247,241,230,0.72)">Le Booth combines modern technology with timeless craftsmanship, creating a photo experience that feels as unique as your event. Each booth is hand-built and thoughtfully designed to blend into the room it stands in, and to give your guests something real to take home.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;padding-top:6px">
+          <a href="Get%20a%20Quote.dc.html" data-cta="" style="padding:16px 26px;border-radius:8px;background:#F7F1E6;color:#2A211A;font-family:'Archivo Black',Helvetica,sans-serif;font-size:14px;letter-spacing:0.05em">GET A QUOTE</a>
+          <a href="#profit" data-outline="" style="padding:16px 26px;border-radius:8px;border:1px solid rgba(247,241,230,0.28);font-family:'Archivo Black',Helvetica,sans-serif;font-size:14px;letter-spacing:0.05em">FOR VENUES</a>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;align-items:start">
+        <img src="assets/guests-portrait.png" alt="Guests photographed inside a Le Booth photo booth" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4 / 5;object-fit:cover;display:block">
+        <video ref="{{ videoRef }}" src="assets/booth-video.mp4" autoPlay="{{ true }}" muted="{{ true }}" defaultMuted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" disablePictureInPicture="{{ true }}" controls="{{ false }}" preload="metadata" style="width:100%;aspect-ratio:4 / 5;object-fit:cover;display:block;background:#111"></video>
+      </div>
+    </div>
+  </section>
+
+  <div style="display:flex;overflow:hidden;padding:14px 0;border-top:1px solid rgba(247,241,230,0.12);border-bottom:1px solid rgba(247,241,230,0.12)">
+    <div style="display:flex;gap:34px;white-space:nowrap;font-family:'Archivo Black',Helvetica,sans-serif;font-size:13px;letter-spacing:0.2em;color:rgba(247,241,230,0.6);animation:lb-drift 30s linear infinite">
+      <span>WEDDINGS ✳ RECEPTIONS ✳ CORPORATE ✳ BRAND ACTIVATIONS ✳ BARS &amp; CLUBS ✳ RESTAURANTS ✳ SAN DIEGO ✳ LOS ANGELES ✳</span>
+      <span>WEDDINGS ✳ RECEPTIONS ✳ CORPORATE ✳ BRAND ACTIVATIONS ✳ BARS &amp; CLUBS ✳ RESTAURANTS ✳ SAN DIEGO ✳ LOS ANGELES ✳</span>
+      <span>WEDDINGS ✳ RECEPTIONS ✳ CORPORATE ✳ BRAND ACTIVATIONS ✳ BARS &amp; CLUBS ✳ RESTAURANTS ✳ SAN DIEGO ✳ LOS ANGELES ✳</span>
+    </div>
+  </div>
+
+  <section id="services" style="padding:clamp(52px,8vw,96px) clamp(18px,4vw,32px) 0">
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:10px;max-width:940px">
+      <span style="font-size:11px;letter-spacing:0.18em;color:rgba(247,241,230,0.5)">WHAT WE DO</span>
+      <h2 style="margin:0;font-family:'Archivo Black',Helvetica,sans-serif;font-size:clamp(32px,5.6vw,60px);line-height:0.98;letter-spacing:-0.025em">RENT ONE. BUY ONE. <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em">or host one free.</span></h2>
+    </div>
+  </section>
+
+  <section id="rentals" style="padding:clamp(36px,5vw,56px) clamp(18px,4vw,32px);border-bottom:1px solid rgba(247,241,230,0.12)">
+    <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,4.5vw,52px);align-items:center">
+      <img src="assets/booth-angle.png" alt="Le Booth enclosed photo booth set up outdoors under string lights at golden hour" loading="lazy" decoding="async" style="width:100%;max-width:410px;justify-self:center;aspect-ratio:397 / 621;object-fit:cover;display:block">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:11px;letter-spacing:0.18em;color:rgba(247,241,230,0.5)">01 ✳ WEDDINGS &amp; EVENTS</span>
+        <h3 style="margin:0;font-family:'Archivo Black',Helvetica,sans-serif;font-size:clamp(28px,4.2vw,42px);line-height:1;letter-spacing:-0.02em">PHOTO BOOTH RENTALS</h3>
+        <p style="margin:0;max-width:48ch;font-size:17px;line-height:1.6;color:rgba(247,241,230,0.7)">Most of our nights are weddings, cocktail hour through last dance, and the same booths run company parties, birthdays, and brand activations. We deliver, set up, run the booth, and pack out. Unlimited sessions while we're there, prints on the spot, and an online gallery after the event.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:14px;padding-top:6px">
+          <div data-card="" style="display:flex;flex-direction:column;gap:6px;padding:20px;background:#332921;border:1px solid rgba(247,241,230,0.12)">
+            <span style="font-size:10px;letter-spacing:0.14em;color:rgba(247,241,230,0.72)">3 HOURS</span>
+            <span style="font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1">The Standard</span>
+            <span style="font-size:14px;line-height:1.5;color:rgba(247,241,230,0.66)">Enclosed booth run by us, unlimited sessions, printed strips on your custom artwork, and an online gallery.</span>
+          </div>
+          <div data-invert-card="" style="display:flex;flex-direction:column;gap:6px;padding:20px;background:#F7F1E6;color:#2A211A">
+            <span style="font-size:10px;letter-spacing:0.14em;color:rgba(42,33,26,0.75)">4+ HOURS ✳ POPULAR</span>
+            <span style="font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1">The Full Night</span>
+            <span style="font-size:14px;line-height:1.5;color:rgba(42,33,26,0.7)">Everything in The Standard with more time on the floor, from cocktail hour to the last song.</span>
+          </div>
+        </div>
+        <a href="Get%20a%20Quote.dc.html" data-cta="" style="align-self:flex-start;margin-top:10px;padding:15px 24px;border-radius:8px;background:#F7F1E6;color:#2A211A;font-family:'Archivo Black',Helvetica,sans-serif;font-size:14px;letter-spacing:0.05em">CHECK MY DATE</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="custom" style="padding:clamp(36px,5vw,56px) clamp(18px,4vw,32px);border-bottom:1px solid rgba(247,241,230,0.12)">
+    <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,4.5vw,52px);align-items:center">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:11px;letter-spacing:0.18em;color:rgba(247,241,230,0.5)">02 ✳ FOR OPERATORS &amp; BRANDS</span>
+        <h3 style="margin:0;font-family:'Archivo Black',Helvetica,sans-serif;font-size:clamp(28px,4.2vw,42px);line-height:1;letter-spacing:-0.02em">CUSTOM BUILT BOOTHS</h3>
+        <p style="margin:0;max-width:48ch;font-size:17px;line-height:1.6;color:rgba(247,241,230,0.7)">Built to order, for operators starting their own rental business, brands that need an activation piece, and venues that want a permanent fixture matched to the room. Design, fabrication, software, and setup training.</p>
+        <div style="display:flex;flex-direction:column;gap:9px;padding-top:4px">
+          <div style="display:flex;gap:12px;align-items:baseline"><span style="color:rgba(247,241,230,0.5)">✳</span><span style="font-size:15px;line-height:1.5;color:rgba(247,241,230,0.8)">Any finish: powder coat, walnut, mirror, chrome, wrapped vinyl</span></div>
+          <div style="display:flex;gap:12px;align-items:baseline"><span style="color:rgba(247,241,230,0.5)">✳</span><span style="font-size:15px;line-height:1.5;color:rgba(247,241,230,0.8)">Mirrorless camera, studio strobe, dye-sub printer inside</span></div>
+          <div style="display:flex;gap:12px;align-items:baseline"><span style="color:rgba(247,241,230,0.5)">✳</span><span style="font-size:15px;line-height:1.5;color:rgba(247,241,230,0.8)">Your branding on the screen flow, prints, and share messages</span></div>
+          <div style="display:flex;gap:12px;align-items:baseline"><span style="color:rgba(247,241,230,0.5)">✳</span><span style="font-size:15px;line-height:1.5;color:rgba(247,241,230,0.8)">One-person setup, and a walkthrough on servicing it</span></div>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:10px;padding-top:14px;border-top:1px solid rgba(247,241,230,0.14);margin-top:8px">
+          <span style="font-size:11px;letter-spacing:0.14em;color:rgba(247,241,230,0.5)">LEAD TIME</span>
+          <span style="font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1">4–6 weeks</span>
+          <span style="font-size:14px;color:rgba(247,241,230,0.72)">from approved design to delivery</span>
+        </div>
+        <a href="Get%20a%20Quote.dc.html" data-cta="" style="align-self:flex-start;margin-top:12px;padding:15px 24px;border-radius:8px;background:#F7F1E6;color:#2A211A;font-family:'Archivo Black',Helvetica,sans-serif;font-size:14px;letter-spacing:0.05em">START A BUILD</a>
+      </div>
+      <img src="assets/g-asterisk.jpg" alt="Custom Le Booth photo booth in walnut finish with the Le Booth asterisk mark" loading="lazy" decoding="async" style="width:100%;max-width:440px;justify-self:center;aspect-ratio:1063 / 1600;object-fit:cover;display:block">
+    </div>
+  </section>
+
+  <section id="profit" style="padding:clamp(52px,8vw,96px) clamp(18px,4vw,32px);background:#221A14;border-bottom:1px solid rgba(247,241,230,0.12)">
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:40px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,4.5vw,52px);align-items:end">
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <span style="font-size:11px;letter-spacing:0.18em;color:rgba(247,241,230,0.72)">03 ✳ FOR VENUES</span>
+          <h3 style="margin:0;font-family:'Archivo Black',Helvetica,sans-serif;font-size:clamp(30px,4.8vw,52px);line-height:0.98;letter-spacing:-0.025em">A BOOTH IN YOUR VENUE, AT NO COST TO YOU.</h3>
+        </div>
+        <p style="margin:0;font-size:18px;line-height:1.6;color:rgba(247,241,230,0.72)">We install one of our booths in your bar, club, restaurant, or lounge and maintain it. Guests pay per session, and you take a cut of every dollar it makes. No equipment cost, no staffing, no upkeep on your end.</p>
+      </div>
+      <div data-steps-grid="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:rgba(247,241,230,0.16);border:1px solid rgba(247,241,230,0.16)">
+        <div data-step="" style="display:flex;flex-direction:column;gap:10px;padding:28px;background:#221A14">
+          <span style="font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1">01</span>
+          <span style="font-size:16px;font-weight:700">We walk your space</span>
+          <span style="font-size:14px;line-height:1.55;color:rgba(247,241,230,0.66)">A short visit to find the right corner: foot traffic, lighting, power.</span>
+        </div>
+        <div data-step="" style="display:flex;flex-direction:column;gap:10px;padding:28px;background:#221A14">
+          <span style="font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1">02</span>
+          <span style="font-size:16px;font-weight:700">We install it free</span>
+          <span style="font-size:14px;line-height:1.55;color:rgba(247,241,230,0.66)">Booth, prints, and branding matched to your room. You pay nothing.</span>
+        </div>
+        <div data-step="" style="display:flex;flex-direction:column;gap:10px;padding:28px;background:#221A14">
+          <span style="font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1">03</span>
+          <span style="font-size:16px;font-weight:700">Guests use it nightly</span>
+          <span style="font-size:14px;line-height:1.55;color:rgba(247,241,230,0.66)">Card or tap to start. We restock paper and service it on a schedule.</span>
+        </div>
+        <div data-step="" style="display:flex;flex-direction:column;gap:10px;padding:28px;background:#221A14">
+          <span style="font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1">04</span>
+          <span style="font-size:16px;font-weight:700">You get paid monthly</span>
+          <span style="font-size:14px;line-height:1.55;color:rgba(247,241,230,0.66)">Transparent reporting on every session, your split deposited monthly.</span>
+        </div>
+      </div>
+      <div data-invert-card="" style="display:flex;flex-wrap:wrap;align-items:center;gap:22px;justify-content:space-between;padding:26px 30px;background:#F7F1E6;color:#2A211A">
+        <div style="display:flex;align-items:center;gap:18px">
+          <img data-mark="" src="assets/logo-mark.png" alt="" loading="lazy" decoding="async" style="width:34px;height:34px;object-fit:contain;flex:none">
+          <span style="font-family:'Instrument Serif',Georgia,serif;font-size:29px;line-height:1.15;max-width:32ch">Zero upfront. Zero staffing. A new line of revenue.</span>
+        </div>
+        <a href="Get%20a%20Quote.dc.html" data-cta="" style="padding:15px 26px;border-radius:8px;background:#2A211A;color:#F7F1E6;font-family:'Archivo Black',Helvetica,sans-serif;font-size:14px;letter-spacing:0.05em">TALK ABOUT MY VENUE</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" style="padding:clamp(52px,8vw,96px) 0 clamp(52px,8vw,96px) clamp(18px,4vw,32px);border-bottom:1px solid rgba(247,241,230,0.12)">
+    <div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;padding:0 clamp(18px,4vw,32px) 28px 0">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:11px;letter-spacing:0.18em;color:rgba(247,241,230,0.72)">THE WORK</span>
+        <h2 style="margin:0;font-family:'Archivo Black',Helvetica,sans-serif;font-size:clamp(30px,4.8vw,52px);line-height:1;letter-spacing:-0.025em">THE BOOTH, UP CLOSE.</h2>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <span style="font-size:11px;letter-spacing:0.12em;color:rgba(247,241,230,0.72)">SWIPE OR DRAG</span>
+        <div style="display:flex;gap:8px">
+          <button onClick="{{ galleryPrev }}" aria-label="Previous photo" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(247,241,230,0.28);background:transparent;color:#F7F1E6;font-size:16px;cursor:pointer">←</button>
+          <button data-cta="" onClick="{{ galleryNext }}" aria-label="Next photo" style="width:44px;height:44px;border-radius:50%;border:none;background:#F7F1E6;color:#2A211A;font-size:16px;cursor:pointer">→</button>
+        </div>
+      </div>
+    </div>
+    <div data-reveal="" data-rail="" ref="{{ galleryRef }}" role="region" aria-label="Photo gallery, scrollable" tabIndex="{{ zero }}" style="display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:0;padding-right:clamp(18px,4vw,32px);padding-bottom:6px;cursor:grab;scrollbar-width:none">
+      <img src="assets/g-glow-angle.jpg" alt="Le Booth photo booth at dusk with its panels lit from inside, string lights overhead" loading="lazy" decoding="async" style="flex:none;height:min(110vw,520px);width:auto;aspect-ratio:1067 / 1600;object-fit:cover;display:block;scroll-snap-align:start">
+      <img src="assets/g-night-blur.jpg" alt="Long-exposure night shot of the booth glowing warm from within" loading="lazy" decoding="async" style="flex:none;height:min(110vw,520px);width:auto;aspect-ratio:1280 / 1600;object-fit:cover;display:block;scroll-snap-align:start">
+      <img src="assets/g-front-fountain.jpg" alt="Front view through the open booth toward a courtyard fountain" loading="lazy" decoding="async" style="flex:none;height:min(110vw,520px);width:auto;aspect-ratio:1076 / 1600;object-fit:cover;display:block;scroll-snap-align:start">
+      <img src="assets/g-panel-detail.jpg" alt="Close-up of the booth light panels, aluminum trim, and camera port" loading="lazy" decoding="async" style="flex:none;height:min(110vw,520px);width:auto;aspect-ratio:1224 / 1600;object-fit:cover;display:block;scroll-snap-align:start">
+    </div>
+  </section>
+
+  <sc-if value="{{ showReferral }}" hint-placeholder-val="{{ true }}">
+  <section id="referral" style="padding:clamp(48px,7.5vw,88px) clamp(18px,4vw,32px);background:#221A14;border-bottom:1px solid rgba(247,241,230,0.12)">
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:34px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px;align-items:end">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-size:11px;letter-spacing:0.18em;color:rgba(247,241,230,0.5)">FOR PLANNERS, DJS &amp; PHOTOGRAPHERS</span>
+          <h2 style="margin:0;font-family:'Archivo Black',Helvetica,sans-serif;font-size:clamp(30px,4.4vw,46px);line-height:1;letter-spacing:-0.025em">SEND US A COUPLE. WE'LL TAKE CARE OF YOU.</h2>
+        </div>
+        <p style="margin:0;font-size:17px;line-height:1.6;color:rgba(247,241,230,0.72)">If you work weddings and events in Southern California, refer your clients to us and earn on every booking that closes. No exclusivity, no paperwork. You make the intro, we handle the rest.</p>
+      </div>
+      <div data-steps-grid="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:rgba(247,241,230,0.16);border:1px solid rgba(247,241,230,0.16)">
+        <div data-step="" style="display:flex;flex-direction:column;gap:9px;padding:26px;background:#221A14">
+          <span style="font-family:'Instrument Serif',Georgia,serif;font-size:32px;line-height:1">01</span>
+          <span style="font-size:16px;font-weight:700">You make the intro</span>
+          <span style="font-size:14px;line-height:1.55;color:rgba(247,241,230,0.66)">Forward an email or drop our name. That's the whole ask.</span>
+        </div>
+        <div data-step="" style="display:flex;flex-direction:column;gap:9px;padding:26px;background:#221A14">
+          <span style="font-family:'Instrument Serif',Georgia,serif;font-size:32px;line-height:1">02</span>
+          <span style="font-size:16px;font-weight:700">We quote and book</span>
+          <span style="font-size:14px;line-height:1.55;color:rgba(247,241,230,0.66)">Your client gets a real quote within a business day, not a price sheet.</span>
+        </div>
+        <div data-step="" style="display:flex;flex-direction:column;gap:9px;padding:26px;background:#221A14">
+          <span style="font-family:'Instrument Serif',Georgia,serif;font-size:32px;line-height:1">03</span>
+          <span style="font-size:16px;font-weight:700">You get paid</span>
+          <span style="font-size:14px;line-height:1.55;color:rgba(247,241,230,0.66)">A cut of every booking that closes, sent after the event runs.</span>
+        </div>
+      </div>
+      <div data-invert-card="" style="display:flex;flex-wrap:wrap;align-items:center;gap:22px;justify-content:space-between;padding:26px 30px;background:#F7F1E6;color:#2A211A">
+        <div style="display:flex;align-items:center;gap:18px">
+          <img data-mark="" src="assets/logo-mark.png" alt="" loading="lazy" decoding="async" style="width:34px;height:34px;object-fit:contain;flex:none">
+          <span style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(22px,2.6vw,29px);line-height:1.15;max-width:32ch">Work weddings for a living? Let's talk.</span>
+        </div>
+        <a href="Get%20a%20Quote.dc.html" data-cta="" style="padding:15px 26px;border-radius:8px;background:#2A211A;color:#F7F1E6;font-family:'Archivo Black',Helvetica,sans-serif;font-size:14px;letter-spacing:0.05em">JOIN THE REFERRAL LIST</a>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section id="faq" style="padding:clamp(52px,8vw,96px) clamp(18px,4vw,32px);border-bottom:1px solid rgba(247,241,230,0.12)">
+    <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(28px,4vw,56px);align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:11px;letter-spacing:0.18em;color:rgba(247,241,230,0.5)">QUESTIONS</span>
+        <h2 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-size:clamp(32px,4.6vw,52px);line-height:1">Before you ask.</h2>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <sc-for list="{{ faqs }}" as="item" hint-placeholder-count="6">
+          <div data-faq="" role="button" tabIndex="{{ item.tab }}" aria-expanded="{{ item.expanded }}" onClick="{{ item.toggle }}" onKeyDown="{{ item.key }}" style="display:flex;flex-direction:column;gap:12px;padding:24px 0;border-top:1px solid rgba(247,241,230,0.16);cursor:pointer">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px">
+              <span style="font-size:20px;font-weight:600;letter-spacing:-0.01em">{{ item.q }}</span>
+              <span style="font-size:18px;line-height:1;color:rgba(247,241,230,0.6)">{{ item.sign }}</span>
+            </div>
+            <sc-if value="{{ item.open }}" hint-placeholder-val="{{ true }}">
+              <p style="margin:0;max-width:62ch;font-size:16px;line-height:1.6;color:rgba(247,241,230,0.68)">{{ item.a }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section style="padding:clamp(52px,8vw,96px) clamp(18px,4vw,32px);background:#FDF3E3;color:#2A211A">
+    <div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px">
+      <div style="display:flex;flex-direction:column;gap:18px;max-width:40ch">
+        <span style="font-size:11px;letter-spacing:0.18em;color:rgba(42,33,26,0.72)">NEXT STEP</span>
+        <h2 style="margin:0;font-family:'Archivo Black',Helvetica,sans-serif;font-size:clamp(30px,4.8vw,52px);line-height:0.98;letter-spacing:-0.025em;display:flex;flex-direction:column;gap:0.18em;text-wrap:balance"><span style="display:block">TELL US ABOUT<span style="letter-spacing: -1.3px; width: 388px; height: 136px">&nbsp;YOUR EVENT.</span></span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:0.82em;line-height:1;opacity:0.78;margin-top:0.12em">Or your venue.</span></h2>
+        <p style="margin:0;font-size:17px;line-height:1.6;color:rgba(42,33,26,0.7)">A few questions and we'll send a personalized quote with a booking link, usually within one business day.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+        <a href="Get%20a%20Quote.dc.html" data-cta-dark="" style="padding:20px 34px;border-radius:8px;background:#2A211A;color:#F7F1E6;font-family:'Archivo Black',Helvetica,sans-serif;font-size:17px;letter-spacing:0.05em">GET A QUOTE</a>
+        <a href="About%20Us.dc.html" style="font-size:13px;letter-spacing:0.08em;color:rgba(42,33,26,0.78)">OR READ OUR STORY →</a>
+      </div>
+    </div>
+  </section><footer style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:26px clamp(18px,4vw,32px);background:#221A14;color:rgba(247,241,230,0.55);font-size:11px;letter-spacing:0.12em">
+    <span style="display:flex;align-items:center;gap:10px">
+      <img data-mark="" src="assets/logo-mark.png" alt="" style="width:15px;height:15px;object-fit:contain;filter:invert(1);opacity:0.7">
+      <span>LE BOOTH ✳ SAN DIEGO &amp; LOS ANGELES ✳ EST. 2025</span>
+    </span>
+    <span style="display:flex;flex-wrap:wrap;align-items:center;gap:16px">
+      <a href="mailto:info@le-booth.com">INFO@LE-BOOTH.COM</a>
+      <a href="tel:+16194380163">(619) 438-0163</a>
+      <span>© 2026 LE BOOTH</span>
+    </span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;defaultTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;night&quot;,&quot;day&quot;],&quot;default&quot;:&quot;night&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Appearance&quot;},&quot;showReferral&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
+class Component extends DCLogic {
+  state = { open: 0, theme: null, theming: "0" };
+  galleryRef = React.createRef();
+
+  slide(dir) {
+    const el = this.galleryRef.current;
+    if (!el) return;
+    const first = el.children[0];
+    const step = first ? first.getBoundingClientRect().width + 14 : 360;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  }
+
+  bindGallery() {
+    const el = this.galleryRef.current;
+    if (!el || el.dataset.bound) return;
+    el.dataset.bound = "1";
+    el.addEventListener("keydown", e => {
+      if (e.key === "ArrowRight") { e.preventDefault(); this.slide(1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); this.slide(-1); }
+    });
+    let down = false, x0 = 0, s0 = 0;
+    el.addEventListener("pointerdown", e => {
+      if (e.pointerType === "touch") return;
+      down = true; x0 = e.clientX; s0 = el.scrollLeft;
+      el.style.scrollSnapType = "none"; el.style.cursor = "grabbing";
+    });
+    el.addEventListener("pointermove", e => { if (down) { el.scrollLeft = s0 - (e.clientX - x0); e.preventDefault(); } });
+    const end = () => { if (!down) return; down = false; el.style.cursor = "grab"; el.style.scrollSnapType = "x mandatory"; };
+    ["pointerup", "pointerleave", "pointercancel"].forEach(t => el.addEventListener(t, end));
+    el.addEventListener("dragstart", e => e.preventDefault());
+  }
+  progressRef = React.createRef();
+  starRef = React.createRef();
+  videoRef = React.createRef();
+  eyeLRef = React.createRef();
+  eyeRRef = React.createRef();
+  stickyNavRef = React.createRef();
+  skipRef = React.createRef();
+
+  trackEyes = () => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    this.onMouse = e => {
+      const L = this.eyeLRef.current, Rr = this.eyeRRef.current;
+      if (!L || !Rr) return;
+      const bl = L.parentElement.getBoundingClientRect();
+      const br = Rr.parentElement.getBoundingClientRect();
+      const cx = (bl.left + bl.width / 2 + br.left + br.width / 2) / 2;
+      const cy = (bl.top + bl.height / 2 + br.top + br.height / 2) / 2;
+      const dx = e.clientX - cx, dy = e.clientY - cy;
+      const a = Math.atan2(dy, dx);
+      const d = Math.min(1.5, Math.hypot(dx, dy) / 26);
+      const t = "translate(" + (Math.cos(a) * d).toFixed(2) + "px," + (Math.sin(a) * d).toFixed(2) + "px)";
+      L.style.transform = t;
+      Rr.style.transform = t;
+    };
+    window.addEventListener("mousemove", this.onMouse, { passive: true });
+  };
+
+  componentDidMount() {
+    document.title = "Le Booth | Photo Booth Rentals & Custom Booths in San Diego";
+    const v = this.videoRef.current;
+    if (v) {
+      v.muted = true;
+      v.volume = 0;
+      v.setAttribute("muted", "");
+      v.addEventListener("volumechange", () => { if (!v.muted || v.volume > 0) { v.muted = true; v.volume = 0; } });
+      v.loop = true;
+      v.addEventListener("ended", () => { v.currentTime = 0; const p = v.play(); if (p && p.catch) p.catch(() => {}); });
+      const kick = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      v.addEventListener("loadeddata", kick);
+      kick();
+      const io = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+        else v.pause();
+      }), { threshold: 0.25 });
+      io.observe(v);
+      this.videoIo = io;
+    }
+    this.bindGallery();
+    this.setupScroll();
+    this.trackEyes();
+  }
+
+  componentWillUnmount() {
+    if (this.onMouse) window.removeEventListener("mousemove", this.onMouse);
+    if (this.onScroll) {
+      window.removeEventListener("scroll", this.onScroll);
+      window.removeEventListener("resize", this.onScroll);
+    }
+  }
+
+  setupScroll() {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    this.pending = [];
+    // measure AFTER layout settles, otherwise everything looks above-the-fold
+    const hidePass = () => {
+      if (reduce || this.hidDone) return;
+      Array.from(document.querySelectorAll("[data-reveal]")).forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.9) return;
+        el.style.opacity = "0";
+        el.style.transform = "translateY(26px)";
+        el.style.transition = "opacity 0.7s cubic-bezier(0.2,0.8,0.2,1), transform 0.7s cubic-bezier(0.2,0.8,0.2,1)";
+        this.pending.push(el);
+      });
+      if (this.pending.length) this.hidDone = true;   // only latch once it actually hid something
+    };
+    requestAnimationFrame(() => requestAnimationFrame(hidePass));
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { hidePass(); if (this.onScroll) this.onScroll(); });
+    setTimeout(() => { hidePass(); if (this.onScroll) this.onScroll(); }, 600);
+    this.revealPass = () => {
+      if (!this.pending || !this.pending.length) return;
+      const line = window.innerHeight * 0.9;
+      this.pending = this.pending.filter(el => {
+        if (el.getBoundingClientRect().top < line) {
+          el.style.opacity = "1";
+          el.style.transform = "none";
+          return false;
+        }
+        return true;
+      });
+    };
+    this.onScroll = () => {
+      if (this.raf) return;
+      this.raf = requestAnimationFrame(() => {
+        this.raf = null;
+        this.revealPass();
+        const doc = document.documentElement;
+        const max = doc.scrollHeight - window.innerHeight;
+        const y = window.scrollY || doc.scrollTop || 0;
+        const bar = this.progressRef.current;
+        if (bar) bar.style.width = (max > 0 ? Math.min(100, (y / max) * 100) : 0) + "%";
+        const nav = this.stickyNavRef.current;
+        if (nav) {
+          const hero = document.getElementById("top");
+          const trigger = hero ? hero.offsetTop + hero.offsetHeight * 0.75 : 520;
+          nav.style.transform = y > trigger ? "translateY(0)" : "translateY(-110%)";
+        }
+        const star = this.starRef.current;
+        if (star && !reduce) {
+          const r = star.getBoundingClientRect();
+          if (r.bottom > -200 && r.top < window.innerHeight + 200) {
+            const p = (window.innerHeight / 2 - (r.top + r.height / 2)) / window.innerHeight;
+            star.style.transform = "rotate(" + (p * 26).toFixed(2) + "deg)";
+          }
+        }
+      });
+    };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    window.addEventListener("resize", this.onScroll, { passive: true });
+    window.addEventListener("hashchange", () => setTimeout(this.onScroll, 350));
+    this.onScroll();
+    setTimeout(this.onScroll, 400);
+  }
+
+  renderVals() {
+    const qa = [
+      ["How far ahead should I book?","Dates go first come, first served, and weekends in peak season go fastest. Your date is held once the agreement is signed and the retainer is paid. If your date is soon, ask anyway."],
+      ["What do you need from the venue?","A level spot that doesn't block exits or walkways, and a standard outlet nearby."],
+      ["Can the prints match our colors or our brand?","Yes. Custom print artwork is included, designed around your names, colors, monogram, or logo, with up to two rounds of revisions."],
+      ["Why isn't there pricing on the site?", "Because a 200-guest reception, a product launch, and a permanent bar install are three different jobs. Fill out the form and we'll send a real quote for yours, plus a link to book it."],
+      ["What does a custom build include?", "Design and fabrication of the shell, camera, lighting, printer, touchscreen, our booth software, and a training walkthrough, plus support after delivery."],
+      ["How does the venue profit share work?", "We install and service the booth at our cost, guests pay per session, and you take a percentage of everything it earns. We put the specific split in writing after walking your space."],
+      ["Do you travel outside San Diego?", "San Diego and Los Angeles are standard, and we travel beyond both for a fee. Custom builds ship nationwide crated."]
+    ];
+    const faqs = qa.map(([q, a], i) => {
+      const open = this.state.open === i;
+      const toggle = () => this.setState(s => ({ open: s.open === i ? -1 : i }));
+      return {
+        q, a, open, sign: open ? "–" : "+", tab: 0, expanded: open ? "true" : "false", toggle,
+        key: e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } }
+      };
+    });
+    const theme = this.state.theme ?? (this.props.defaultTheme === "day" ? "day" : "night");
+    return {
+      faqs,
+      videoRef: this.videoRef,
+      galleryRef: this.galleryRef,
+      galleryPrev: () => this.slide(-1),
+      galleryNext: () => this.slide(1),
+      eyeLRef: this.eyeLRef, eyeRRef: this.eyeRRef,
+      progressRef: this.progressRef, starRef: this.starRef, stickyNavRef: this.stickyNavRef,
+      zero: 0,
+      skipRef: this.skipRef,
+      showSkip: () => { const el = this.skipRef.current; if (el) el.style.left = "12px"; },
+      hideSkip: () => { const el = this.skipRef.current; if (el) el.style.left = "-9999px"; },
+      sunTop: theme === "day" ? "2px" : "9px",
+      sunBg: theme === "day" ? "currentColor" : "transparent",
+      rays: [0, 45, 90, 135, 180, 225, 270, 315].map(deg => ({
+        rot: deg + "deg",
+        w: "2.5px",
+        h: "5px",
+        ml: "-1.25px",
+        out: "-10px"
+      })),
+      theme,
+      theming: this.state.theming,
+      showReferral: this.props.showReferral ?? true,
+      toggleTheme: () => {
+        clearTimeout(this.themeTimer);
+        this.setState({ theme: theme === "night" ? "day" : "night", theming: "1" });
+        this.themeTimer = setTimeout(() => this.setState({ theming: "0" }), 2800);
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
