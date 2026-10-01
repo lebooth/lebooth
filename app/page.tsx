@@ -33,7 +33,7 @@ const gallery: GalleryItem[] = [
   { src: "/images/g-panel-detail.jpg", alt: "Close-up of the booth light panels, aluminum trim, and camera port", width: 1224, height: 1600 },
 ];
 
-const MARQUEE = "WEDDINGS ✳ RECEPTIONS ✳ CORPORATE ✳ BRAND ACTIVATIONS ✳ BARS & CLUBS ✳ RESTAURANTS ✳ SAN DIEGO ✳ LOS ANGELES ✳";
+const MARQUEE = "WEDDINGS ✳︎ RECEPTIONS ✳︎ CORPORATE ✳︎ BRAND ACTIVATIONS ✳︎ BARS & CLUBS ✳︎ RESTAURANTS ✳︎ SAN DIEGO ✳︎ LOS ANGELES ✳︎";
 
 export default function HomePage() {
   return (
@@ -55,7 +55,7 @@ export default function HomePage() {
             </span>
             <span className="wordmark-city" aria-hidden="true">SAN DIEGO</span>
           </h1>
-          <span className="hero-caption">HAND-BUILT IN SAN DIEGO ✳ EST. 2025</span>
+          <span className="hero-caption">HAND-BUILT IN SAN DIEGO ✳︎ EST. 2025</span>
         </section>
 
         {/* ---------- intro ---------- */}
@@ -120,7 +120,7 @@ export default function HomePage() {
               />
             </div>
             <div className="stack gap-18">
-              <span className="eyebrow">01 ✳ WEDDINGS &amp; EVENTS</span>
+              <span className="eyebrow">01 ✳︎ WEDDINGS &amp; EVENTS</span>
               <h3 className="h-svc">PHOTO BOOTH RENTALS</h3>
               <p className="lead">
                 Most of our nights are weddings, cocktail hour through last dance, and the same booths run company parties,
@@ -134,7 +134,7 @@ export default function HomePage() {
                   <span className="small">Enclosed booth run by us, unlimited sessions, printed strips on your custom artwork, and an online gallery.</span>
                 </div>
                 <div className="card invert">
-                  <span className="tag">4+ HOURS ✳ POPULAR</span>
+                  <span className="tag">4+ HOURS ✳︎ POPULAR</span>
                   <span className="pkg-name">The Full Night</span>
                   <span className="small">Everything in The Standard with more time on the floor, from cocktail hour to the last song.</span>
                 </div>
@@ -147,7 +147,7 @@ export default function HomePage() {
         <section id="custom" className="wrap sec-md rule-b">
           <div className="grid g-420 gap-lg items-center" data-reveal>
             <div className="stack gap-18">
-              <span className="eyebrow">02 ✳ FOR OPERATORS &amp; BRANDS</span>
+              <span className="eyebrow">02 ✳︎ FOR OPERATORS &amp; BRANDS</span>
               <h3 className="h-svc">CUSTOM BUILT BOOTHS</h3>
               <p className="lead">
                 Built to order, for operators starting their own rental business, brands that need an activation piece, and
@@ -182,7 +182,7 @@ export default function HomePage() {
           <div className="stack gap-40" data-reveal>
             <div className="grid g-420 gap-lg items-end">
               <div className="stack gap-16">
-                <span className="eyebrow eyebrow-strong">03 ✳ FOR VENUES</span>
+                <span className="eyebrow eyebrow-strong">03 ✳︎ FOR VENUES</span>
                 <h3 className="h-big">A BOOTH IN YOUR VENUE, AT NO COST TO YOU.</h3>
               </div>
               <p className="lead lead-18" style={{ maxWidth: "none" }}>

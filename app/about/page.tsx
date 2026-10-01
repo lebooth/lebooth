@@ -70,7 +70,7 @@ export default function AboutPage() {
       <main id="main">
         <section className="wrap grid g-400 items-center" style={{ gap: "clamp(30px, 4.5vw, 56px)", paddingBlock: "clamp(56px, 8vw, 100px) clamp(52px, 7vw, 90px)" }}>
           <div className="stack gap-20">
-            <span className="eyebrow">ABOUT US ✳ SAN DIEGO</span>
+            <span className="eyebrow">ABOUT US ✳︎ SAN DIEGO</span>
             <h1 className="about-h1">
               <span className="sr-only">Le Booth, hand-built photo booths in San Diego, </span>Est. 2025
             </h1>
@@ -105,7 +105,7 @@ export default function AboutPage() {
           <div className="grid g-360 items-center" style={{ gap: "clamp(26px, 3.5vw, 40px)" }} data-reveal>
             {/* Swap for a real portrait: <Image src="/images/leonardo.jpg" alt="Leonardo Amezcua in the shop" ... /> */}
             <div className="placeholder">
-              <span>PORTRAIT ✳ LEONARDO IN THE SHOP</span>
+              <span>PORTRAIT ✳︎ LEONARDO IN THE SHOP</span>
             </div>
             <div className="stack gap-16 founder">
               <span className="eyebrow">THE FOUNDER</span>

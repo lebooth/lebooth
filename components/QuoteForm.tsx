@@ -97,7 +97,7 @@ export default function QuoteForm() {
   if (status === "sent") {
     const recap = [INTENTS[intent], amountOpts[amount], addons.length ? `${addons.length} add-on${addons.length === 1 ? "" : "s"}` : null, fields.date.trim() || null]
       .filter(Boolean)
-      .join("  ✳  ");
+      .join("  ✳︎  ");
     return (
       <div className="panel" data-theme="night" role="status">
         <div className="sent">
@@ -119,7 +119,7 @@ export default function QuoteForm() {
   return (
     <form className="panel" data-theme="night" onSubmit={onSubmit} noValidate aria-label="Quote request">
       <div className="stack gap-8" role="group" aria-labelledby="q-step1">
-        <span id="q-step1" className="step-label">STEP 01 ✳ I’M INTERESTED IN</span>
+        <span id="q-step1" className="step-label">STEP 01 ✳︎ I’M INTERESTED IN</span>
         <div className="chips chips-lg">
           {INTENTS.map((label, i) => (
             <button key={label} type="button" className="chip" aria-pressed={intent === i} onClick={() => pickIntent(i)}>
@@ -130,7 +130,7 @@ export default function QuoteForm() {
       </div>
 
       <div className="stack gap-12">
-        <span className="step-label">STEP 02 ✳ THE DETAILS</span>
+        <span className="step-label">STEP 02 ✳︎ THE DETAILS</span>
         <div className="fields">
           <label className="sr-only" htmlFor="q-name">Full name</label>
           <input id="q-name" ref={nameRef} className="field" value={fields.name} onChange={set("name")} placeholder="Full name (required)" autoComplete="name" required />
@@ -152,7 +152,7 @@ export default function QuoteForm() {
       </div>
 
       <div className="stack gap-8" role="group" aria-labelledby="q-step3">
-        <span id="q-step3" className="step-label">STEP 03 ✳ HOW MUCH DO YOU NEED?</span>
+        <span id="q-step3" className="step-label">STEP 03 ✳︎ HOW MUCH DO YOU NEED?</span>
         <div className="chips">
           {amountOpts.map((label, i) => (
             <button key={label} type="button" className="chip" aria-pressed={amount === i} onClick={() => setAmount(i)}>
@@ -163,7 +163,7 @@ export default function QuoteForm() {
       </div>
 
       <div className="stack gap-8" role="group" aria-labelledby="q-step4">
-        <span id="q-step4" className="step-label">STEP 04 ✳ NICE TO HAVE</span>
+        <span id="q-step4" className="step-label">STEP 04 ✳︎ NICE TO HAVE</span>
         <div className="chips">
           {addonOpts.map((label, i) => (
             <button key={label} type="button" className="chip" aria-pressed={addons.includes(i)} onClick={() => toggleAddon(i)}>
@@ -174,12 +174,12 @@ export default function QuoteForm() {
       </div>
 
       <div className="stack gap-8">
-        <label htmlFor="q-source" className="step-label">STEP 05 ✳ WHERE DID YOU HEAR ABOUT US?</label>
+        <label htmlFor="q-source" className="step-label">STEP 05 ✳︎ WHERE DID YOU HEAR ABOUT US?</label>
         <input id="q-source" className="field" value={fields.source} onChange={set("source")} placeholder="Instagram, Google, a friend, my venue..." />
       </div>
 
       <div className="stack gap-8">
-        <label htmlFor="q-notes" className="step-label">STEP 06 ✳ ANYTHING ELSE</label>
+        <label htmlFor="q-notes" className="step-label">STEP 06 ✳︎ ANYTHING ELSE</label>
         <textarea id="q-notes" className="field" value={fields.notes} onChange={set("notes")} placeholder={notesLabel} rows={4} />
       </div>
 

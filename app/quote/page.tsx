@@ -30,7 +30,7 @@ export default function QuotePage() {
           { href: "/#services", label: "SERVICES" },
           { href: "/#gallery", label: "GALLERY" },
         ]}
-        end={<span className="subheader-note">SAN DIEGO ✳ EST. 2025</span>}
+        end={<span className="subheader-note">SAN DIEGO ✳︎ EST. 2025</span>}
       />
 
       <main id="main">

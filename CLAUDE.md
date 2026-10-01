@@ -35,6 +35,7 @@ Fonts: Archivo (body), Archivo Black (headings, buttons, nav), Instrument Serif 
 
 - **No pricing anywhere.** Everything routes to the quote form; the owner replies with a HoneyBook link.
 - **No em dashes in site copy.** Use commas, colons, or full stops.
+- **The ✳ separator is always followed by U+FE0E** (`✳︎`, or `\2733\FE0E` in CSS `content`). Without it iPhones/Android render a green emoji. Copy an existing ✳︎ rather than typing a bare ✳.
 - **No invented facts.** No fake testimonials, stats, venue names, or phone numbers. Only offer what's real: enclosed booths only, no road case, no props/backdrop/scrapbook.
 - Weddings lead, but businesses (buying booths, profit share) must stay clearly visible.
 - Home hero stays clean: wordmark over the photo, no centered CTA button, no centered logo.

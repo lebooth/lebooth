@@ -63,7 +63,7 @@ export default function HomeShell({ children }: { children: ReactNode }) {
 
       <div className="bar">
         <Image src="/images/logo-mark.png" alt="" width={12} height={12} />
-        <span>NOW BOOKING 2026 &amp; 2027 WEDDINGS ✳ CUSTOM BUILDS SHIPPING NATIONWIDE</span>
+        <span>NOW BOOKING 2026 &amp; 2027 WEDDINGS ✳︎ CUSTOM BUILDS SHIPPING NATIONWIDE</span>
       </div>
 
       <ScrollProgress />
