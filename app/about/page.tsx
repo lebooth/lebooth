@@ -46,9 +46,9 @@ const aboutJsonLd = {
 
 const HOW_WE_WORK = [
   ["Hand-built", "Every booth is fabricated in our San Diego shop, not ordered from a catalog. Real materials, real finishes, serviceable parts."],
-  ["Studio lighting", "Strobe and a diffused key light, so photos look shot, not snapped in a dark reception hall on someone’s phone."],
+  ["Studio lighting", "Strobe and a diffused key light, so every photo looks like it was shot in a studio."],
   ["Yours, branded", "Print layouts, on-screen flow, and share messages designed around your colors, monogram, or logo, with up to two rounds of revisions."],
-  ["On the night", "We deliver, set up, run it, and pack out. Unlimited sessions while we’re there, prints on the spot, and an online gallery after the event."],
+  ["On the night", "We deliver, set up, run it, and pack out. Unlimited sessions while we’re there, prints on the spot, and an online gallery after the event with the Signature and Bespoke."],
 ];
 
 export default function AboutPage() {
