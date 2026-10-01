@@ -103,22 +103,24 @@ export default function AboutPage() {
 
         <section className="wrap sec-sm rule-t">
           <div className="grid g-360 items-center" style={{ gap: "clamp(26px, 3.5vw, 40px)" }} data-reveal>
-            {/* Swap for a real portrait: <Image src="/images/leonardo.jpg" alt="Leonardo Amezcua in the shop" ... /> */}
-            <div className="placeholder">
-              <span>PORTRAIT ✳︎ LEONARDO IN THE SHOP</span>
+            <div className="founder-photo">
+              <Image
+                src="/images/founder.webp"
+                alt="Leonardo Amezcua, founder of Le Booth, sitting on a log below a waterfall"
+                fill
+                sizes="(max-width: 760px) 100vw, 50vw"
+                className="cover"
+                style={{ objectPosition: "50% 65%" }}
+              />
             </div>
             <div className="stack gap-16 founder">
               <span className="eyebrow">THE FOUNDER</span>
               <h3 className="founder-name">Leonardo Amezcua</h3>
               <p className="lead">
-                Le Booth started with one booth built by hand and a belief that a photo booth should feel like part of the
-                room, not a rental dropped in a corner. That’s still how every build and every event runs.
-              </p>
-              <p className="lead">
                 The intention is to live a life that is in the search of exploration and creativity, always building, always
                 trying the next idea. Le Booth was born out of that: a way to turn that curiosity into something other people
-                could step inside. But the point is what happens there. Every booth is built to hold a memory, the kind you
-                find on the fridge years later and still remember the night.
+                could step inside. But the point is what happens there. Every booth is built to hold a memory. That’s how every
+                build and every event runs.
               </p>
               <div className="signed">
                 <span className="signed-label">SIGNED</span>

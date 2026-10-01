@@ -480,11 +480,7 @@ section[id] { scroll-margin-top: 96px; }
 .panel-cell:hover { background: #0B0B0B; }
 .panel-cell .serif { font-size: 30px; line-height: 1; }
 .panel-cell p { font-size: 15px; line-height: 1.6; color: rgba(var(--ink-rgb), 0.68); }
-.placeholder {
-  height: min(62vw, 420px); display: flex; align-items: flex-end; padding: 16px;
-  background: repeating-linear-gradient(135deg, #111 0 10px, #1A1A1A 10px 20px);
-}
-.placeholder span { font-size: 10px; letter-spacing: 0.12em; color: rgba(var(--ink-rgb), 0.55); }
+.founder-photo { position: relative; height: min(62vw, 420px); overflow: hidden; background: #111; }
 .founder-name { font-family: var(--f-serif); font-weight: 400; font-size: clamp(30px, 4.4vw, 44px); line-height: 1.05; }
 .founder p { max-width: 44ch; }
 .signed {
