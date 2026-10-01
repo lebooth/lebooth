@@ -169,8 +169,8 @@ export default function HomePage() {
               <span className="eyebrow">02 ✳︎ FOR OPERATORS &amp; BRANDS</span>
               <h3 className="h-svc">CUSTOM BUILT BOOTHS</h3>
               <p className="lead">
-                Built to order, for operators starting their own rental business, brands that need an activation piece, and
-                venues that want a permanent fixture matched to the room. Design, fabrication, software, and setup training.
+                Built to order, for brands that need an activation piece and venues that want a permanent fixture matched to
+                the room. Design, fabrication, software, and setup training.
               </p>
               <ul className="ticks">
                 <li>Any finish: powder coat, walnut, mirror, chrome, wrapped vinyl</li>
