@@ -33,6 +33,28 @@ const gallery: GalleryItem[] = [
   { src: "/images/g-panel-detail.jpg", alt: "Close-up of the booth light panels, aluminum trim, and camera port", width: 1224, height: 1600 },
 ];
 
+/** Rental packages, kept short on the cards. No prices on the site: everything routes to the quote form. */
+const PACKAGES = [
+  {
+    name: "The Classic",
+    hours: "3 HOURS",
+    popular: false,
+    summary: "Enclosed booth, unlimited sessions and prints, custom strip artwork. Delivery, setup, and removal included.",
+  },
+  {
+    name: "The Signature",
+    hours: "4 HOURS",
+    popular: true,
+    summary: "The Classic, matched to your event with a custom backdrop, fully custom curtain, and custom sign.",
+  },
+  {
+    name: "The Bespoke",
+    hours: "6 HOURS",
+    popular: false,
+    summary: "Designed from scratch around your brand or event, from a full booth wrap to bespoke print design.",
+  },
+];
+
 const MARQUEE = "WEDDINGS ✳︎ RECEPTIONS ✳︎ CORPORATE ✳︎ BRAND ACTIVATIONS ✳︎ BARS & CLUBS ✳︎ RESTAURANTS ✳︎ SAN DIEGO ✳︎ LOS ANGELES ✳︎";
 
 export default function HomePage() {
@@ -127,17 +149,14 @@ export default function HomePage() {
                 birthdays, and brand activations. We deliver, set up, run the booth, and pack out. Unlimited sessions while
                 we’re there, prints on the spot, and an online gallery after the event.
               </p>
-              <div className="grid g-190 gap-14" style={{ paddingTop: 6 }}>
-                <div className="card">
-                  <span className="tag">3 HOURS</span>
-                  <span className="pkg-name">The Standard</span>
-                  <span className="small">Enclosed booth run by us, unlimited sessions, printed strips on your custom artwork, and an online gallery.</span>
-                </div>
-                <div className="card invert">
-                  <span className="tag">4+ HOURS ✳︎ POPULAR</span>
-                  <span className="pkg-name">The Full Night</span>
-                  <span className="small">Everything in The Standard with more time on the floor, from cocktail hour to the last song.</span>
-                </div>
+              <div className="grid gap-14 pkg-grid" style={{ paddingTop: 6 }}>
+                {PACKAGES.map((p) => (
+                  <div className={`card${p.popular ? " invert" : ""}`} key={p.name}>
+                    <span className="tag">{p.hours}{p.popular ? " ✳︎ POPULAR" : ""}</span>
+                    <span className="pkg-name">{p.name}</span>
+                    <span className="small">{p.summary}</span>
+                  </div>
+                ))}
               </div>
               <Link href="/quote" className="btn btn-md btn-self" style={{ marginTop: 10 }}>CHECK MY DATE</Link>
             </div>

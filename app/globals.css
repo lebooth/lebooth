@@ -373,6 +373,9 @@ section[id] { scroll-margin-top: 96px; }
 .card.invert:hover { border-color: transparent; }
 .card .small { line-height: 1.5; color: rgba(var(--ink-rgb), 0.7); }
 
+/* rental packages: three small cards in the rentals column (one per row on narrow screens) */
+.pkg-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); }
+
 .ticks { display: flex; flex-direction: column; gap: 9px; margin: 0; padding: 4px 0 0; list-style: none; }
 .ticks li { display: flex; gap: 12px; align-items: baseline; font-size: 15px; line-height: 1.5; color: rgba(var(--ink-rgb), 0.8); }
 .ticks li::before { content: "\2733\FE0E"; font-size: 16px; color: rgba(var(--ink-rgb), 0.5); }
