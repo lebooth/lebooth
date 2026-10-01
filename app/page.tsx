@@ -89,7 +89,7 @@ export default function HomePage() {
               </h2>
               <p className="lead lead-lg">
                 Le Booth combines modern technology with timeless craftsmanship, creating a photo experience that feels as
-                unique as your event. Each booth is hand-built and thoughtfully designed to blend into the room it stands
+                unique as your event. Each booth is hand-built and thoughtfully designed to complement the room it stands
                 in, and to give your guests something real to take home.
               </p>
               <div className="btn-row">
@@ -175,7 +175,7 @@ export default function HomePage() {
               <ul className="ticks">
                 <li>Any finish: powder coat, walnut, mirror, chrome, wrapped vinyl</li>
                 <li>Mirrorless camera, studio strobe, dye-sub printer inside</li>
-                <li>Your branding on the screen flow, prints, and share messages</li>
+                <li>Your branding on the screen flow and prints</li>
                 <li>One-person setup, and a walkthrough on servicing it</li>
               </ul>
               <div className="meta-row">
