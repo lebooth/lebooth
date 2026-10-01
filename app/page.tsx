@@ -45,13 +45,13 @@ const PACKAGES = [
     name: "The Signature",
     hours: "4 HOURS",
     popular: true,
-    summary: "The Classic, matched to your event with a custom backdrop, fully custom curtain, and custom sign.",
+    summary: "The Classic, matched to your event with a custom backdrop, curtain, and sign, plus an online gallery.",
   },
   {
     name: "The Bespoke",
     hours: "6 HOURS",
     popular: false,
-    summary: "Designed from scratch around your brand or event, from a full booth wrap to bespoke print design.",
+    summary: "Designed from scratch around your brand or event, from a full booth wrap to bespoke prints and an online gallery.",
   },
 ];
 
@@ -147,7 +147,7 @@ export default function HomePage() {
               <p className="lead">
                 Most of our nights are weddings, cocktail hour through last dance, and the same booths run company parties,
                 birthdays, and brand activations. We deliver, set up, run the booth, and pack out. Unlimited sessions while
-                we’re there, prints on the spot, and an online gallery after the event.
+                we’re there, prints on the spot, and an online gallery after the event with the Signature and Bespoke.
               </p>
               <div className="grid gap-14 pkg-grid" style={{ paddingTop: 6 }}>
                 {PACKAGES.map((p) => (

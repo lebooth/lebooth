@@ -36,7 +36,7 @@ Fonts: Archivo (body), Archivo Black (headings, buttons, nav), Instrument Serif 
 - **No pricing anywhere.** Everything routes to the quote form; the owner replies with a HoneyBook link.
 - **No em dashes in site copy.** Use commas, colons, or full stops.
 - **The ✳ separator is always followed by U+FE0E** (`✳︎`, or `\2733\FE0E` in CSS `content`). Without it iPhones/Android render a green emoji. Copy an existing ✳︎ rather than typing a bare ✳.
-- **No invented facts.** No fake testimonials, stats, venue names, or phone numbers. Only offer what's real: enclosed booths only, no road case, no props/scrapbook. Custom backdrops are offered only in the Signature and Bespoke packages.
+- **No invented facts.** No fake testimonials, stats, venue names, or phone numbers. Only offer what's real: enclosed booths only, no road case, no props/scrapbook. Custom backdrops and the online gallery are included only in the Signature and Bespoke packages (the gallery is an add-on for the Classic).
 - **Rental packages** (`PACKAGES` in `app/page.tsx`, owner-supplied copy): The Classic (3 hrs), The Signature (4 hrs, marked Popular), The Bespoke (6 hrs). Small cards in the rentals column with a one-line summary each, same size and spot as the original two cards (owner tried full inclusion lists and preferred short). Prices exist but stay off the site.
 - Weddings lead, but businesses (buying booths, profit share) must stay clearly visible.
 - Home hero stays clean: wordmark over the photo, no centered CTA button, no centered logo.
