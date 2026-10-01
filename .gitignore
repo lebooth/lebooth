@@ -3,6 +3,8 @@ node_modules
 out
 .env*
 !.env.example
+# Committed on purpose: public values only (Supabase URL + publishable key). Never put secret keys here.
+!.env.production
 .vercel
 .claude
 *.tsbuildinfo
