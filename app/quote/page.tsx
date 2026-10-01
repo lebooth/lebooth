@@ -45,7 +45,7 @@ export default function QuotePage() {
               </h1>
               <p className="lead lead-18" style={{ maxWidth: "42ch" }}>
                 Answer a few questions and we’ll send a personalized quote with a booking link, usually within one business
-                day. No packages to decode, no pressure.
+                day. No pressure.
               </p>
               <ul className="intro-list">
                 <li>Weddings, corporate events, and private parties</li>

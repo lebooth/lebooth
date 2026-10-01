@@ -26,12 +26,12 @@ export default function QuoteForm() {
 
   const amountOpts = isBuild || isVenue
     ? ["One booth", "Two booths", "Three or more", "Not sure yet"]
-    : ["3 hours", "4 hours", "5+ hours", "Not sure yet"];
+    : ["3 hours", "4 hours", "6+ hours", "Not sure yet"];
   const addonOpts = isBuild
-    ? ["Custom shell finish", "Branded software", "Second camera", "Training on site"]
+    ? ["Full custom design", "Extra camera", "Extra printer", "On-site training"]
     : isVenue
       ? ["Card payments", "Branded prints", "Weekly restock", "Revenue reporting", "Social sharing"]
-      : ["Custom print artwork", "Booth graphics or signage", "Extra hours", "Text and email delivery", "Online gallery"];
+      : ["Custom wrap", "Extra hours", "Online gallery", "Props", "Custom signage", "Custom curtains"];
 
   const dateLabel = isBuild ? "When do you need it delivered?" : isVenue ? "When could we visit?" : "Event date";
   const placeLabel = isVenue ? "Venue name and city" : isBuild ? "Where should it ship?" : "Venue and city";
