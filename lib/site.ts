@@ -9,6 +9,20 @@ export const site = {
   founded: "2025",
 };
 
+/** Link-preview image (iMessage, WhatsApp, Facebook, X...). 1200x630, cropped from the hero photo. */
+export const shareImage = {
+  url: "/images/share.jpg",
+  width: 1200,
+  height: 630,
+  alt: "Le Booth enclosed photo booth glowing at night",
+};
+
+/**
+ * Shared Open Graph fields. A page's `openGraph` replaces the layout's entirely
+ * (image included), so every page must spread this in.
+ */
+export const baseOpenGraph = { type: "website" as const, siteName: site.name, locale: "en_US", images: [shareImage] };
+
 export const businessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",

@@ -20,7 +20,7 @@ npm run build    # must pass with zero type errors before any push
 - `lib/supabase/server.ts`: server-side Supabase client (publishable key, no auth). Supabase project "Le Booth Website" (`roaysljhksexcadthdfj`).
 - **Supabase security model (no auth yet):** `quote_requests` has RLS on; the public `anon` role may only INSERT (no select/update/delete), because rows hold customer PII and the publishable key is public. Length/email checks live in the table itself since anyone can call the API with that key. Read leads in the Supabase dashboard. Don't add a public SELECT policy.
 - `app/layout.tsx`: also holds the **Google Ads tag** (`AW-18490897737`, via `next/script`). It's in the root layout so every page gets it exactly once; never add it to individual pages. The "Request Quote" conversion (`QUOTE_CONVERSION` in `components/QuoteForm.tsx`) fires only after a successful submission, never on page load.
-- `lib/site.ts`: contact info + LocalBusiness JSON-LD. `lib/faqs.ts`: FAQ copy + FAQPage JSON-LD.
+- `lib/site.ts`: contact info + LocalBusiness JSON-LD, plus `shareImage` (link-preview image, `public/images/share.jpg`, 1200x630 crop of the hero night photo) and `baseOpenGraph`. A page's `openGraph` replaces the layout's entirely, so **every page's `openGraph` must spread `...baseOpenGraph`** or it loses the share image. `lib/faqs.ts`: FAQ copy + FAQPage JSON-LD.
 - `components/`: client components are only the interactive bits (theme, eyes, gallery, FAQ, video, form, reveal, progress).
 - `design-reference/`: the approved HTML prototypes the site was built from. Visual source of truth. Their image paths point at `assets/` and won't resolve here; the same images live in `public/images`.
 

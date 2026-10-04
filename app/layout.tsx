@@ -3,7 +3,7 @@ import { Archivo, Archivo_Black, Instrument_Serif } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
 import RevealObserver from "@/components/RevealObserver";
-import { site } from "@/lib/site";
+import { baseOpenGraph, shareImage, site } from "@/lib/site";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -43,13 +43,8 @@ export const metadata: Metadata = {
     "Hand-built photo booths for San Diego and Los Angeles weddings and events. Rentals, custom booth builds, and free venue installs on a revenue share.",
   applicationName: site.name,
   robots: { index: true, follow: true },
-  openGraph: {
-    type: "website",
-    siteName: site.name,
-    locale: "en_US",
-    images: [{ url: "/images/booth-angle.png", alt: "Le Booth enclosed photo booth under string lights" }],
-  },
-  twitter: { card: "summary_large_image", images: ["/images/booth-angle.png"] },
+  openGraph: baseOpenGraph,
+  twitter: { card: "summary_large_image", images: [shareImage] },
 };
 
 export const viewport: Viewport = {

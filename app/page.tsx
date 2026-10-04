@@ -8,7 +8,7 @@ import Gallery, { type GalleryItem } from "@/components/Gallery";
 import HomeShell from "@/components/HomeShell";
 import JsonLd from "@/components/JsonLd";
 import { faqJsonLd, homeFaqs } from "@/lib/faqs";
-import { businessJsonLd } from "@/lib/site";
+import { baseOpenGraph, businessJsonLd } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: { absolute: "Le Booth | Photo Booth Rentals & Custom Booths in San Diego & Los Angeles" },
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "Hand-built photo booths for San Diego and Los Angeles weddings and events. Booth rentals with unlimited photo sessions and printed strips, fully custom booth builds, and free venue installs on a revenue share. Est. 2025.",
   alternates: { canonical: "/" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Le Booth | Photo Booth Rentals & Custom Booths in San Diego",
     description:
       "Hand-built photo booths for weddings and events across San Diego and Los Angeles. Rentals, custom builds, and free venue installs on a revenue share.",

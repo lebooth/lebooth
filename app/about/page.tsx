@@ -6,7 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import OjosStar from "@/components/OjosStar";
 import ScrollProgress from "@/components/ScrollProgress";
 import SubHeader from "@/components/SubHeader";
-import { site } from "@/lib/site";
+import { baseOpenGraph, site } from "@/lib/site";
 
 /*
      site, booths and everything you see here by ojos
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "Le Booth was founded in 2025 by Leonardo Amezcua. Every booth is hand-built in our San Diego shop for weddings and events across San Diego and Los Angeles.",
   alternates: { canonical: "/about" },
   openGraph: {
+    ...baseOpenGraph,
     title: "About Le Booth | Hand-Built Photo Booths, San Diego",
     description: "Founded 2025 by Leonardo Amezcua. Hand-built photo booths for San Diego and Los Angeles weddings and events.",
     url: "/about",
