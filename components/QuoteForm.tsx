@@ -10,6 +10,15 @@ type Fields = { name: string; email: string; phone: string; date: string; place:
 const EMPTY: Fields = { name: "", email: "", phone: "", date: "", place: "", size: "", source: "", notes: "" };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+/** Google Ads "Request Quote" conversion. Fired once per successful submission (not on page load). */
+const QUOTE_CONVERSION = { send_to: "AW-18490897737/OrMXCKHd-Y8dEMnqkvFE", value: 1.0, currency: "USD" };
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export default function QuoteForm() {
   const [intent, setIntent] = useState(0);
   const [amount, setAmount] = useState(1);
@@ -86,6 +95,8 @@ export default function QuoteForm() {
         }),
       });
       if (!res.ok) throw new Error(String(res.status));
+      // Count real leads only: skip if the spam trap was filled. gtag comes from the Google tag in app/layout.tsx.
+      if (!honeypot) window.gtag?.("event", "conversion", QUOTE_CONVERSION);
       setStatus("sent");
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch {
