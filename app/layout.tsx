@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Archivo_Black, Instrument_Serif } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 import RevealObserver from "@/components/RevealObserver";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -28,6 +29,9 @@ const instrument = Instrument_Serif({
 const lasso = localFont({ src: "./fonts/TAYDannyLasso.woff2", variable: "--font-lasso", display: "swap" });
 const amaya = localFont({ src: "./fonts/TAYAmaya.woff", variable: "--font-amaya", display: "swap" });
 const misprint = localFont({ src: "./fonts/TAYMisprint.woff2", variable: "--font-misprint", display: "swap", preload: false });
+
+/** Google Ads account tag. Public ID, safe to commit. */
+const GOOGLE_ADS_ID = "AW-18490897737";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -61,6 +65,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Lets CSS hide scroll-reveal blocks only when JS is running */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        {/* Google tag (gtag.js) for Google Ads. Lives here so it's on every page exactly once. */}
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} strategy="afterInteractive" />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GOOGLE_ADS_ID}');`}
+        </Script>
       </head>
       <body>
         {children}
