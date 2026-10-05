@@ -1,23 +1,13 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
+import { SENT_KEY, type SentHandoff } from "./QuoteSent";
 
 const INTENTS = ["Wedding", "Corporate or brand event", "Private party", "Buy a custom booth", "Profit share in my venue"];
 
 type Fields = { name: string; email: string; phone: string; date: string; place: string; size: string; source: string; notes: string };
 const EMPTY: Fields = { name: "", email: "", phone: "", date: "", place: "", size: "", source: "", notes: "" };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-/** Google Ads "Request Quote" conversion. Fired once per successful submission (not on page load). */
-const QUOTE_CONVERSION = { send_to: "AW-18490897737/OrMXCKHd-Y8dEMnqkvFE", value: 1.0, currency: "USD" };
-
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
 
 export default function QuoteForm() {
   const [intent, setIntent] = useState(0);
@@ -26,7 +16,7 @@ export default function QuoteForm() {
   const [fields, setFields] = useState<Fields>(EMPTY);
   const [honeypot, setHoneypot] = useState("");
   const [error, setError] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending">("idle");
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
 
@@ -95,36 +85,26 @@ export default function QuoteForm() {
         }),
       });
       if (!res.ok) throw new Error(String(res.status));
-      // Count real leads only: skip if the spam trap was filled. gtag comes from the Google tag in app/layout.tsx.
-      if (!honeypot) window.gtag?.("event", "conversion", QUOTE_CONVERSION);
-      setStatus("sent");
-      window.scrollTo({ top: 0, behavior: "smooth" });
     } catch {
       setStatus("idle");
       setError("Something went wrong sending that. Try again, or email info@le-booth.com.");
+      return;
     }
-  }
-
-  if (status === "sent") {
-    const recap = [INTENTS[intent], amountOpts[amount], addons.length ? `${addons.length} add-on${addons.length === 1 ? "" : "s"}` : null, fields.date.trim() || null]
-      .filter(Boolean)
-      .join("  ✳︎  ");
-    return (
-      <div className="panel" data-theme="night" role="status">
-        <div className="sent">
-          <Image src="/images/logo-mark.png" alt="" width={52} height={52} className="mark" />
-          <span className="sent-title">Got it, thanks.</span>
-          <span className="lead" style={{ fontSize: 16, maxWidth: "44ch" }}>
-            We’ll read through your details and email a personalized quote with a link to book, usually within one business day.
-          </span>
-          <div className="recap">
-            <span className="step-label">WHAT YOU SENT</span>
-            <span style={{ fontSize: 15, lineHeight: 1.55, color: "rgba(var(--ink-rgb), 0.8)" }}>{recap}</span>
-          </div>
-          <Link href="/" className="btn btn-outline btn-sm btn-self" style={{ marginTop: 8 }}>BACK HOME</Link>
-        </div>
-      </div>
-    );
+    // Hand the recap to /quote/thanks, which shows it and fires the Google Ads conversion once.
+    // Skipped when the spam trap was filled, so bots never count as leads.
+    if (!honeypot) {
+      const recap = [INTENTS[intent], amountOpts[amount], addons.length ? `${addons.length} add-on${addons.length === 1 ? "" : "s"}` : null, fields.date.trim() || null]
+        .filter(Boolean)
+        .join("  ✳︎  ");
+      const handoff: SentHandoff = { recap, at: Date.now() };
+      try {
+        window.sessionStorage.setItem(SENT_KEY, JSON.stringify(handoff));
+      } catch {
+        // Storage blocked (private mode etc.): the thanks page still shows, just without the recap or conversion.
+      }
+    }
+    // Full page load (not client-side) so the Google tag records a fresh page view of /quote/thanks.
+    window.location.assign("/quote/thanks");
   }
 
   return (
